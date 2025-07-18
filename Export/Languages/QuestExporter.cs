@@ -156,13 +156,15 @@ namespace Trizbort.Export.Languages {
     }
 
     protected override void ExportHeader(TextWriter writer, string title, string author, string description, string history) {
+      writer.WriteLine("<?xml version=\"1.0\"?>");
+      writer.WriteLine("<!-- Created by Trizbort (KV mod 18/JUL/2025) -->");
       writer.WriteLine("<asl version=\"580\">");
       writer.WriteLine();
       writer.WriteLine("  <include ref=\"English.aslx\"/>");
       writer.WriteLine("  <include ref=\"Core.aslx\"/>");
       writer.WriteLine("  <game name=\"{0}\">", title);
       writer.WriteLine("    <gameid>{0}</gameid>", Guid.NewGuid().ToString());
-      writer.WriteLine("    <version>1.0</version>");
+      writer.WriteLine("    <version>0.1</version>");
       writer.WriteLine("    <firstpublished>{0}</firstpublished>", DateTime.Now.Year);
       writer.WriteLine("    <author>{0}</author>", author);
       writer.WriteLine("    <description>{0}</description>", description);
