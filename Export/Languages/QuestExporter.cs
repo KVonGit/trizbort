@@ -74,7 +74,6 @@ namespace Trizbort.Export.Languages {
           writer.WriteLine("    </object>");
         }
 
-        // TODO need to add player if here
         writer.WriteLine("  </object>");
         writer.WriteLine();
       }
@@ -157,7 +156,7 @@ namespace Trizbort.Export.Languages {
     }
 
     protected override void ExportHeader(TextWriter writer, string title, string author, string description, string history) {
-      writer.WriteLine("<asl version=\"550\">");
+      writer.WriteLine("<asl version=\"580\">");
       writer.WriteLine();
       writer.WriteLine("  <include ref=\"English.aslx\"/>");
       writer.WriteLine("  <include ref=\"Core.aslx\"/>");
