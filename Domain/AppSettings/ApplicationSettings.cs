@@ -57,5 +57,7 @@ namespace Trizbort.Domain.AppSettings
     public bool ShowFullPathInTitleBar { get; set; }
 
     public bool ShowTooltips => ShowDescriptionsInTooltips || ShowObjectsInTooltips;
+
+    public string LastExportQuestJSFileName { get; internal set; }
   }
 }

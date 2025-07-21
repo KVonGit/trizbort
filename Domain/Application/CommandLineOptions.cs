@@ -14,10 +14,10 @@ namespace Trizbort.Domain.Application
     [Option('a', "loadlastproject", HelpText = "Load the last opened project.")]
     public bool LoadLastProject { get; set; }
 
-    [Option('m',"automap", HelpText = "Start automap with given transcript.")]
+    [Option('m', "automap", HelpText = "Start automap with given transcript.")]
     public string Transcript { get; set; }
 
-    [Option('q',"quicksave", HelpText="Quick save the map to the current Trizbort file.")]
+    [Option('q', "quicksave", HelpText = "Quick save the map to the current Trizbort file.")]
     public string QuickSave { get; set; }
 
     [Option('s', "smartsave", HelpText = "SmartSave the loaded file")]
@@ -52,5 +52,8 @@ namespace Trizbort.Domain.Application
 
     [Option("quest rooms", HelpText = "Export to Quest section.")]
     public string QuestRooms { get; set; }
+    
+    [Option("questjs", HelpText = "Export to QuestJS.")]
+    public string QuestJS { get; set; }
   }
 }

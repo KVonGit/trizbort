@@ -171,6 +171,7 @@
     <Compile Include="Export\Languages\Inform6Exporter.cs" />
     <Compile Include="Export\Domain\Location.cs" />
     <Compile Include="Export\Languages\QuestExporter.cs" />
+    <Compile Include="Export\Languages\QuestJSExporter.cs" />
     <Compile Include="Export\Languages\TadsExporter.cs" />
     <Compile Include="Export\Domain\Thing.cs" />
     <Compile Include="Export\Languages\ZilExporter.cs" />

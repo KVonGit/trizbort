@@ -245,6 +245,8 @@ namespace Trizbort.UI {
 
       if (!string.IsNullOrWhiteSpace(options.QuestRooms)) exportCodeCl<QuestRoomsExporter>(options.QuestRooms);
 
+      if (!string.IsNullOrWhiteSpace(options.QuestJS)) exportCodeCl<QuestJSExporter>(options.QuestJS);
+
       if (options.Exit) Close();
 
       return projectLoaded;
@@ -447,8 +449,14 @@ namespace Trizbort.UI {
       var fileName = ApplicationSettingsController.AppSettings.LastExportQuestFileName;
       if (exportCode<QuestExporter>(ref fileName)) ApplicationSettingsController.AppSettings.LastExportQuestFileName = fileName;
     }
+    
+    private void FileExportQuestJSMenuItem_Click(object sender, EventArgs e) {
+      var fileName = ApplicationSettingsController.AppSettings.LastExportQuestJSFileName;
+      if (exportCode<QuestJSExporter>(ref fileName)) ApplicationSettingsController.AppSettings.LastExportQuestJSFileName = fileName;
+    }
 
-    private void FileExportTadsMenuItem_Click(object sender, EventArgs e) {
+    private void FileExportTadsMenuItem_Click(object sender, EventArgs e)
+    {
       var fileName = ApplicationSettingsController.AppSettings.LastExportTadsFileName;
       if (exportCode<TadsExporter>(ref fileName)) ApplicationSettingsController.AppSettings.LastExportTadsFileName = fileName;
     }
@@ -664,8 +672,13 @@ namespace Trizbort.UI {
     private void questToTextToolStripMenuItem_Click(object sender, EventArgs e) {
       exportCode<QuestExporter>();
     }
+    
+    private void questJSToTextToolStripMenuItem_Click(object sender, EventArgs e) {
+      exportCode<QuestJSExporter>();
+    }
 
-    private void ReverseLineMenuItem_Click(object sender, EventArgs e) {
+    private void ReverseLineMenuItem_Click(object sender, EventArgs e)
+    {
       Canvas.ReverseLineDirection();
     }
 

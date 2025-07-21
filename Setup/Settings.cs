@@ -117,7 +117,7 @@ namespace Trizbort.Setup {
       }
     }
 
-    public static string DefaultRoomName { get; set; } = "Cave";
+    public static string DefaultRoomName { get; set; } = "Room";
     public static RoomShape DefaultRoomShape { get; set; }
 
     public static float DocHorizontalMargin {
@@ -406,7 +406,7 @@ namespace Trizbort.Setup {
       DefaultRoomShape = (RoomShape) element["rooms"]["defaultRoomShape"].ToInt();
       DefaultRoomName = element["rooms"]["defaultRoomName"].Text;
       if (string.IsNullOrEmpty(DefaultRoomName))
-        DefaultRoomName = "Cave";
+        DefaultRoomName = "Room";
 
       HandleSize = element["ui"]["handleSize"].ToFloat(sHandleSize);
       SnapToElementSize = element["ui"]["snapToElementSize"].ToFloat(sSnapToElementSize);

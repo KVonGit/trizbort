@@ -26,11 +26,11 @@ namespace Trizbort.Export.Languages {
         writer.WriteLine("    <inherit name=\"editor_room\" />");
         writer.WriteLine("    <alias>{0}</alias>", location.Room.Name);
         if (location.Room.IsDark) writer.WriteLine("    <dark />");
-        writer.WriteLine("    <attr name=\"grid_width\" type=\"int\">{0}</attr>", location.Room.Width / 32);
-        writer.WriteLine("    <attr name=\"grid_length\" type=\"int\">{0}</attr>", location.Room.Height / 32);
-        writer.WriteLine("    <attr name=\"grid_fill\">{0}</attr>", ColorTranslator.ToHtml(location.Room.RoomFillColor));
-        writer.WriteLine("    <attr name=\"grid_border\">{0}</attr>", ColorTranslator.ToHtml(location.Room.RoomBorderColor));
-        writer.WriteLine("    <attr name=\"implementation_notes\">{0}</attr>", location.Room.GetToolTipText());
+        //writer.WriteLine("    <attr name=\"grid_width\" type=\"int\">{0}</attr>", location.Room.Width / 32);
+        //writer.WriteLine("    <attr name=\"grid_length\" type=\"int\">{0}</attr>", location.Room.Height / 32);
+        //writer.WriteLine("    <attr name=\"grid_fill\">{0}</attr>", ColorTranslator.ToHtml(location.Room.RoomFillColor));
+        //writer.WriteLine("    <attr name=\"grid_border\">{0}</attr>", ColorTranslator.ToHtml(location.Room.RoomBorderColor));
+        //writer.WriteLine("    <attr name=\"implementation_notes\">{0}</attr>", location.Room.GetToolTipText());
         if (!string.IsNullOrEmpty(location.Room.PrimaryDescription)) writer.WriteLine("    <description>{0}</description>", location.Room.PrimaryDescription);
 
         foreach (var direction in Directions.AllDirections) {
